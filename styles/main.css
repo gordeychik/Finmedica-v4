@@ -185,25 +185,33 @@ a:visited {
   text-align: right;
   position: relative;
   transition: filter 0.3s ease;
+  overflow: hidden;
 }
 
 .header__contacts-phones a:after,
 .footer__contacts-phones a:after {
-  content: '';
+  content: "";
   position: absolute;
-  top: 5px;
+  top: 50%;
   right: 0;
-  width: 55px;
-  height: 15px;
-  filter: blur(2.5px);
-  transition: filter 0.3s ease; /* Добавляем плавный переход для эффекта */
-  background-color: rgb(11, 110, 167);
+  transform: translateY(-50%);
+  width: 100px;
+  height: 20px;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  transition: background-color 0.3s ease;
+}
+
+.footer__contacts-phones a:after {
+  background: linear-gradient(to left, #324c5e, rgba(255, 255, 255, 0));
 }
 
 .header__contacts-phones a:hover:after,
 .footer__contacts-phones a:hover:after {
-  background-color: transparent;
-  filter: blur(0); /* Убираем размытие при наведении */
+  background: transparent;
 }
 
 .home {
