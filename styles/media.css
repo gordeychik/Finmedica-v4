@@ -470,6 +470,10 @@
     width: 960px;
   }
 
+    .header__contacts-phones a:after {
+    top: 10px;
+  }
+
   .important__slids {
     width: 930px;
   }
